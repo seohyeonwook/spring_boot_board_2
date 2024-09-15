@@ -1,0 +1,23 @@
+# ?? ?? ??
+server:
+  port: 8082
+
+# database ?? ??
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/board_db?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root
+    password: 123
+  thymeleaf:
+    cache: false
+
+  # spring data jpa ??
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#      ?? ??????? create? ??? ???? ???????????? update
+#Hibernate: create table board_table (board_hits integer not null, created_time datetime(6),
